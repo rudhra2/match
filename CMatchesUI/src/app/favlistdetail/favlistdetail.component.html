@@ -1,0 +1,52 @@
+<button id="logout" style="float:right;margin-top:12px;margin-right: 10px;" [routerLink]="['/favlist']">
+       Back
+   </button>
+
+   <div class="panel panel-info">
+       <div class="panel-heading">
+           <div class="panel-title">Match Detail</div>
+       </div>  
+   </div>
+<div>
+       <div id="div_matchId" class="form-group required">
+              <label for="matchId" class="control-label col-md-4  requiredField"> Match Id </label>
+              <div class="controls col-md-8 ">
+                  <input class="input-md  textinput textInput form-control" disabled=true id="matchId" [(ngModel)]="match.matchId" maxlength="30" name="matchId" placeholder="Match Id" style="margin-bottom: 10px" type="text" />
+              </div>
+          </div>
+          <div id="div_date" class="form-group required">
+              <label for="date" class="control-label col-md-4  requiredField"> Date </label>
+              <div class="controls col-md-8 ">
+                  <input class="input-md  textinput textInput form-control" disabled=true id="date" [(ngModel)]="match.date" maxlength="30" name="date" placeholder="Date" style="margin-bottom: 10px" type="text" />
+              </div>
+          </div>
+          <div id="div_team1" class="form-group required">
+              <label for="team1" class="control-label col-md-4  requiredField"> Team 1 </label>
+              <div class="controls col-md-8 ">
+                  <input class="input-md  textinput textInput form-control" disabled=true id="team1" [(ngModel)]="match.team_1" maxlength="30" name="team1" placeholder="Team 1" style="margin-bottom: 10px" type="text" />
+              </div>
+          </div>
+          <div id="div_team2" class="form-group required">
+              <label for="team2" class="control-label col-md-4  requiredField"> Team 2 </label>
+              <div class="controls col-md-8 ">
+                  <input class="input-md  textinput textInput form-control" disabled=true id="team2" [(ngModel)]="match.team_2" maxlength="30" name="team2" placeholder="Team 2" style="margin-bottom: 10px" type="text" />
+              </div>
+          </div>
+          <div id="div_toss" class="form-group required">
+              <label for="toss" class="control-label col-md-4  requiredField"> Toss Winner </label>
+              <div class="controls col-md-8 ">
+                  <input class="input-md  textinput textInput form-control" disabled=true id="toss" [(ngModel)]="match.toss_winner_team" maxlength="30" name="toss" placeholder="Toss Winner Team" style="margin-bottom: 10px" type="text" />
+              </div>
+          </div>
+          <div id="div_winner" class="form-group required">
+              <label for="winner" class="control-label col-md-4  requiredField"> Winner Team </label>
+              <div class="controls col-md-8 ">
+                  <input class="input-md  textinput textInput form-control" disabled=true id="winner" [(ngModel)]="match.winner_team" maxlength="30" name="winner" placeholder="Winner Team" style="margin-bottom: 10px" type="text" />
+              </div>
+          </div>
+   
+
+            
+            
+        </div>
+     

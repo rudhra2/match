@@ -1,0 +1,44 @@
+version: '2'
+services:
+  news-mysql:
+   image: mysql:latest
+   expose:
+     - 3306
+   ports:
+     - '3306:3306'
+   container_name: mysql-docker-match
+   network_mode: host
+   environment:
+     MYSQL_ROOT_PASSWORD: vasansund@3
+     MYSQL_DATABASE: matchdb
+     MYSQL_USER: root
+     MYSQL_PASSWORD: vasansund@3
+
+  spring:
+    image: spring-match-app
+    build: favouriteservice/
+    restart: always
+    network_mode: host
+    container_name: spring-docker-match
+    depends_on:
+      - news-mysql
+    ports:
+      - 9093:9093
+
+  user-app:
+    image: spring-user-auth
+    build: userservice/
+    restart: always
+    network_mode: host
+    container_name: spring-docker-auth
+    depends_on:
+      - news-mysql
+    ports:
+      - 8082:8082
+
+  angular:
+    image: angular-news-app
+    network_mode: host
+    container_name: angular-docker
+    ports:
+      - 4200:4200
